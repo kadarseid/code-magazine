@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,7 +24,7 @@ p {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -31,7 +32,13 @@ p {
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */
+}
+
+.main-header::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 h1 {
@@ -39,11 +46,26 @@ h1 {
   font-family: sans-serif;
   text-transform: uppercase;
   font-style: italic;
+  float: left;
 }
 
 h1::first-letter {
   font-style: normal;
   margin-right: 5px;
+}
+
+nav {
+  float: right;
+}
+
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
 }
 
 a:link {
@@ -66,8 +88,14 @@ a:active {
   font-style: italic;
 }
 
+.clear {
+  clear: both;
+}
+
 article {
   margin-bottom: 60px;
+  width: 825px;
+  float: left;
 }
 
 .post-header {
@@ -91,6 +119,16 @@ h2::after {
   position: absolute;
   top: -15px;
   right: -25px;
+}
+
+.author-img {
+  float: left;
+}
+
+.author {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 #author {
@@ -136,18 +174,21 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding-block: 50px;
-  width: 500px;
+  padding: 50px 40px;
+  width: 300px;
+  float: right;
 }
 
 h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 .related-author {
@@ -157,6 +198,7 @@ h4 {
 
 #copyright {
   font-size: 16px;
+  clear: both;
 }
 
 button {
